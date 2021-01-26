@@ -1,0 +1,27 @@
+<h1 class="titulo">El mundo de los Héroes</h1>
+
+<p id="tit2">(Da click para activar)</p>
+<ul id="lista" class="heroes">
+    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<br>
+<br>
+<div style="background-color: rgb(243, 220, 158);">
+<aside >
+<fieldset style="width: 6cm;height:5cm;float: right;margin-right: 1cm;"  class="{{value}}">
+
+<legend id="tit1">DATOS</legend>
+<h2 id="tit2">HÉROE {{selectedHero.name | uppercase}}</h2>
+<div class="text"><span>ID: </span>{{selectedHero.id}}</div>
+<div class="text">
+  <div ><span>Name:</span>{{selectedHero.name}}</div>
+ 
+</div>
+
+</fieldset>
+
+<button class="btn1" (click)="eventoButton()">{{valueB}}</button>
+</aside>
+</div>
